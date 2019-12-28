@@ -1,0 +1,324 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 底部图标样式 */
+.weui-tabbar__icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+/* 底部文字 */
+.weui-tabbar__icon + .weui-tabbar__label, span + .weui-tabbar__label {
+  padding-top: 10rpx;
+  font-size: 20px;
+}
+/* 公共样式封装 */
+/* 浮动 */
+.mml-float-l {
+  float: left;
+}
+.mml-float-r {
+  float: right;
+}
+/* 清除浮动 */
+.mml-clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+/* 超出隐藏一行 */
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 超出隐藏两行 */
+.text-hidden-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* 字体大小封装 */
+.mml-font-10 {
+  font-size: 20rpx;
+}
+.mml-font-12 {
+  font-size: 24rpx;
+}
+.mml-font-14 {
+  font-size: 28rpx;
+}
+.mml-font-16 {
+  font-size: 32rpx;
+}
+.mml-font-18 {
+  font-size: 36rpx;
+}
+.mml-font-20 {
+  font-size: 40rpx;
+}
+.mml-font-22 {
+  font-size: 44rpx;
+}
+.mml-font-24 {
+  font-size: 48rpx;
+}
+.mml-font-26 {
+  font-size: 52rpx;
+}
+.mml-font-28 {
+  font-size: 56rpx;
+}
+/* 字体颜色封装 */
+.mml-font-main {
+  color: #eb544d;
+}
+.mmm-font-gray {
+  color: #999999;
+}
+/* 背景颜色封装 */
+/* 主题色 */
+.mml-background-main {
+  background-color: #eb544d;
+}
+/* 灰色背景 */
+.mml-background-gray {
+  background-color: #f7f7f7;
+}
+/* 边距封装 */
+.mml-margin-5 {
+  margin: 10rpx;
+}
+.mml-margin-10 {
+  margin: 20rpx;
+}
+.mml-margin-15 {
+  margin: 30rpx;
+}
+.mml-margin-20 {
+  margin: 40rpx;
+}
+.mml-margin-25 {
+  margin: 50rpx;
+}
+/* 左margin */
+.mml-margin-l-5 {
+  margin-left: 10rpx;
+}
+.mml-margin-l-10 {
+  margin-left: 20rpx;
+}
+.mml-margin-l-15 {
+  margin-left: 30rpx;
+}
+.mml-margin-l-20 {
+  margin-left: 40rpx;
+}
+.mml-margin-l-25 {
+  margin-left: 50rpx;
+}
+/* 右margin */
+.mml-margin-r-5 {
+  margin-right: 10rpx;
+}
+.mml-margin-r-10 {
+  margin-right: 20rpx;
+}
+.mml-margin-r-15 {
+  margin-right: 30rpx;
+}
+.mml-margin-r-20 {
+  margin-right: 40rpx;
+}
+.mml-margin-r-25 {
+  margin-right: 50rpx;
+}
+/* 上margin */
+.mml-margin-t-5 {
+  margin-top: 10rpx;
+}
+.mml-margin-t-10 {
+  margin-top: 20rpx;
+}
+.mml-margin-t-15 {
+  margin-top: 30rpx;
+}
+.mml-margin-t-20 {
+  margin-top: 40rpx;
+}
+.mml-margin-t-25 {
+  margin-top: 50rpx;
+}
+/* 下margin */
+.mml-margin-b-5 {
+  margin-bottom: 10rpx;
+}
+.mml-margin-b-10 {
+  margin-bottom: 20rpx;
+}
+.mml-margin-b-15 {
+  margin-bottom: 30rpx;
+}
+.mml-margin-b-20 {
+  margin-bottom: 40rpx;
+}
+.mml-margin-b-25 {
+  margin-bottom: 50rpx;
+}
+/* 左右margin */
+.mml-margin-lr-5 {
+  margin: 0 10rpx;
+}
+.mml-margin-lr-10 {
+  margin: 0 20rpx;
+}
+.mml-margin-lr-15 {
+  margin: 0 30rpx;
+}
+.mml-margin-lr-20 {
+  margin: 0 40rpx;
+}
+.mml-margin-lr-25 {
+  margin: 0 50rpx;
+}
+/* 上下margin */
+.mml-margin-tb-5 {
+  margin: 10rpx 0;
+}
+.mml-margin-tb-10 {
+  margin: 20rpx 0;
+}
+.mml-margin-tb-15 {
+  margin: 30rpx 0;
+}
+.mml-margin-tb-20 {
+  margin: 40rpx 0;
+}
+.mml-margin-tb-25 {
+  margin: 50rpx 0;
+}
+
+/* padding 封装 */
+.mml-padding-5 {
+  padding: 10rpx;
+}
+.mml-padding-10 {
+  padding: 20rpx;
+}
+.mml-padding-15 {
+  padding: 30rpx;
+}
+.mml-padding-20 {
+  padding: 40rpx;
+}
+.mml-padding-25 {
+  padding: 50rpx;
+}
+/* 左padding */
+.mml-padding-l-5 {
+  padding-left: 10rpx;
+}
+.mml-padding-l-10 {
+  padding-left: 20rpx;
+}
+.mml-padding-l-15 {
+  padding-left: 30rpx;
+}
+.mml-padding-l-20 {
+  padding-left: 40rpx;
+}
+.mml-padding-l-25 {
+  padding-left: 50rpx;
+}
+/* 右padding */
+.mml-padding-r-5 {
+  padding-right: 10rpx;
+}
+.mml-padding-r-10 {
+  padding-right: 20rpx;
+}
+.mml-padding-r-15 {
+  padding-right: 30rpx;
+}
+.mml-padding-r-20 {
+  padding-right: 40rpx;
+}
+.mml-padding-r-25 {
+  padding-right: 50rpx;
+}
+/* 上padding */
+.mml-padding-t-5 {
+  padding-top: 10rpx;
+}
+.mml-padding-t-10 {
+  padding-top: 20rpx;
+}
+.mml-padding-t-15 {
+  padding-top: 30rpx;
+}
+.mml-padding-t-20 {
+  padding-top: 40rpx;
+}
+.mml-padding-t-25 {
+  padding-top: 50rpx;
+}
+/* 下padding */
+.mml-padding-b-5 {
+  padding-bottom: 10rpx;
+}
+.mml-padding-b-10 {
+  padding-bottom: 20rpx;
+}
+.mml-padding-b-15 {
+  padding-bottom: 30rpx;
+}
+.mml-padding-b-20 {
+  padding-bottom: 40rpx;
+}
+.mml-padding-b-25 {
+  padding-bottom: 50rpx;
+}
+/* 左右padding */
+.mml-padding-lr-5 {
+  padding: 0 10rpx;
+}
+.mml-padding-lr-10 {
+  padding: 0 20rpx;
+}
+.mml-padding-lr-15 {
+  padding: 0 30rpx;
+}
+.mml-padding-lr-20 {
+  padding: 0 40rpx;
+}
+.mml-padding-lr-25 {
+  padding: 0 50rpx;
+}
+/* 上下padding */
+.mml-padding-tb-5 {
+  padding: 10rpx 0;
+}
+.mml-padding-tb-10 {
+  padding: 20rpx 0;
+}
+.mml-padding-tb-15 {
+  padding: 30rpx 0;
+}
+.mml-padding-tb-20 {
+  padding: 40rpx 0;
+}
+.mml-padding-tb-25 {
+  padding: 50rpx 0;
+}
