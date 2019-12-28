@@ -1,18 +1,18 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    num: 0,
+    navList: ['热销', '酒饮', '酒饮', 
+    '美护', '餐厨', '出行',
+    '服装' ,'数码']
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  navAction (e) {
+    let num = e.target.id.charAt(e.target.id.length-1)
+    this.setData({
+      num: num
     })
   },
   onLoad: function () {

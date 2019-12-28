@@ -1,13 +1,10 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 首页导航 -->
+<view>
+  <scroll-view
+    class="mml-nav-scroll"
+    scroll-x="true"
+    bindscroll="mml_nav_scroll">
+    <view wx:key="index" wx:for="{{navList}}" bindtap="navAction" id="mml_nav_{{index}}" class="{{num == index?'mml-scroll-item  active':'mml-scroll-item'}}">{{item}}</view>
+  </scroll-view>
 </view>
