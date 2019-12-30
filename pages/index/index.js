@@ -7,7 +7,7 @@ Page({
     navList: ['热销', '酒饮', '酒饮', 
     '美护', '餐厨', '出行',
     '服装' ,'数码'],
-    bannerUrl: ['/image/001.jpg', '/image/002.jpg', '/image/003.jpg', '/image/004.jpg', '/image/005.jpg', '/image/006.jpg', '/image/007.jpg', '/image/008.jpg',]
+    bannerUrl: ['/image/001.jpg', '/image/002.jpg']
   },
   //事件处理函数
   navAction (e) {

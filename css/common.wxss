@@ -26,3 +26,15 @@
   color: #999;
   font-weight: normal;
 }
+/* 价格按钮 */
+.mml-goodsPrice-btn {
+  margin-top: 10rpx;
+  width: 160rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  padding: 8rpx 10rpx;
+  background: #97cbdf;
+}

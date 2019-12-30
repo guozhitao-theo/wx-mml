@@ -6,39 +6,264 @@
     scroll-x="true">
     <view wx:key="index" wx:for="{{navList}}" bindtap="navAction" id="mml_nav_{{index}}" class="{{num == index?'mml-scroll-item  active':'mml-scroll-item'}}">{{item}}</view>
   </scroll-view>
-  <!-- 首页轮播图 -->
-  <view class="mml-swiper-box">
-    <swiper indicator-dots="true"
-    indicator-color="#e2e2e2"
-    circular="true"
-    autoplay="true"
-    indicator-active-color="#eb544d">
-      <swiper-item wx:key="index" wx:for="{{bannerUrl}}">
-        <image src="{{item}}"></image>
-      </swiper-item>
-    </swiper>
-    <!-- 轮播图定位和搜索框 -->
-    <view class="mml-swiper-input-box">
-      <text class="mml-swiper-shop">观音桥店</text>
-      <input class="mml-swiper-input mml-margin-l-30" placeholder="搜索" type="text"></input>
-    </view>
-  </view>
-  <!-- 分割线 -->
-  <view class="mml-segmentation"></view>
-  <!-- 商品内容 -->
-  <view class="mml-goods-container ">
-    <!-- 今日折扣 -->
-    <view class="mml-sell-todayBox">
-      <view class="mml-goodsclass-title">今日折扣 <text class="mml-goodsclass-titleEn sell">Sell today</text> <navigator class="mml-goods-more fr">更多>></navigator></view>
-      <view class="mml-sell-today-left">
-        <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝蓝梅苹果橘子</view>
-        <button size="mini" class="mml-goodsPrice-btn">低至49.5元/件</button>
-      </view>
-      <view class="mml-sell-today-right">
-        <view class="mml-sell-today-rightTop"></view>
-        <view class="mml-sell-today-rightBottom"></view>
+  <scroll-view scroll-y="true">
+    <!-- 首页轮播图 -->
+    <view class="mml-swiper-box">
+      <swiper indicator-dots="true"
+      indicator-color="#e2e2e2"
+      circular="true"
+      autoplay="true"
+      indicator-active-color="#eb544d">
+        <swiper-item wx:key="index" wx:for="{{bannerUrl}}">
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </swiper>
+      <!-- 轮播图定位和搜索框 -->
+      <view class="mml-swiper-input-box">
+        <text class="mml-swiper-shop">观音桥店</text>
+        <input class="mml-swiper-input mml-margin-l-30" placeholder="搜索" type="text"></input>
       </view>
     </view>
-  
-  </view>
+    <!-- 分割线 -->
+    <view class="mml-segmentation"></view>
+    <!-- 商品内容 -->
+    <view class="mml-goods-container ">
+      <!-- 今日折扣 -->
+      <view class="mml-sell-todayBox mml-goods-box">
+        <view class="mml-goodsclass-title">
+          今日折扣 
+          <text class="mml-goodsclass-titleEn sell">Sell today</text>
+          <navigator class="mml-goods-more fr">更多>></navigator>
+        </view>
+        <view class="mml-sell-today-left">
+          <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝蓝梅苹果橘子</view>
+          <navigator class="mml-goodsPrice-btn">低至49.5元/件</navigator>
+          <view class="mml-goods-image-box">
+            <image class="mml-goods-image" src="/image/goods.png"></image>
+          </view>
+        </view>
+        <view class="mml-sell-today-right">
+          <view class="mml-sell-today-rightTop mml-sell-rightBox">
+            <view class="mml-goods-content">
+              <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝蓝梅苹果橘子</view>
+              <navigator class="mml-goodsPrice-btn mml-goodsLeft-btn mml-goodsLeft-topBtn">低至19.5元/件</navigator>
+            </view>
+            <view class="mml-goods-ringtBox">
+              <image src="/image/goods2.png"></image>
+            </view>
+          </view>
+          <view class="mml-sell-today-rightBottom mml-sell-rightBox">
+            <view class="mml-goods-content">
+              <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝蓝梅苹果橘子</view>
+              <navigator class="mml-goodsPrice-btn mml-goodsLeft-btn mml-goodsLeft-bottomBtn">低至19.5元/件</navigator>
+            </view>
+            <view class="mml-goods-ringtBox">
+              <image src="/image/goods2.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 分割线 -->
+      <view class="mml-segmentation"></view>
+      <!-- 热门销售 -->
+      <view class=" mml-hot-SaleBox mml-goods-box">
+        <view class="mml-goodsclass-title">
+          热门销售 
+          <text class="mml-goodsclass-titleEn ">Hot sale</text>
+          <navigator class="mml-goods-more fr">更多>></navigator>
+        </view>
+        <view class="mml-goods-showBox">
+          <image class="mml-goods-showbanner" src="/image/snacks.png"></image>
+          <view class="mml-goods-lists">
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 分割线 -->
+      <view class="mml-segmentation"></view>
+      <!-- 休闲零食 -->
+      <view class="mml-offerBox mml-goods-box">
+        <view class="mml-goodsclass-title">
+          休闲零食 
+          <text class="mml-goodsclass-titleEn ">Casual snakes</text>
+          <navigator class="mml-goods-more fr">更多>></navigator>
+        </view>
+        <view class="mml-goods-showBox">
+          <image class="mml-goods-showbanner" src="/image/offer.png"></image>
+          <view class="mml-goods-lists">
+            <view class="mml-goods-item">
+              <image src="/image/goods2.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 分割线 -->
+      <view class="mml-segmentation"></view>
+      <!-- 酒水饮料 -->
+      <view class="mml-DrinkBox mml-goods-box">
+        <view class="mml-goodsclass-title">
+          酒水饮料 
+          <text class="mml-goodsclass-titleEn ">Drink</text>
+          <navigator class="mml-goods-more fr">更多>></navigator>
+        </view>
+        <view class="mml-goods-showBox">
+          <image class="mml-goods-showbanner" src="/image/realade.png"></image>
+          <view class="mml-goods-lists">
+            <view class="mml-goods-item">
+              <image src="/image/goods2.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+          </view>
+        </view>      
+      </view>
+      <!-- 分割线 -->
+      <view class="mml-segmentation"></view>
+      <!-- 全部商品 -->
+      <view class="mml-ExplorBox mml-goods-box">
+        <view class="mml-goodsclass-title">
+          全部商品 
+          <text class="mml-goodsclass-titleEn ">Explor</text>
+          <navigator class="mml-goods-more fr">更多>></navigator>
+        </view>
+          <view class="mml-goods-lists">
+            <view class="mml-goods-item">
+              <image src="/image/goods2.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+            <view class="mml-goods-item">
+              <image src="/image/goods.png"></image>
+              <view class="mml-goods-detail">
+                <view class="mml-goods-title mml-text-hidden-2">奥利奥 巧克力酒心抹茶松露草莓菠萝杨梅苹果橘子</view>
+                <text class="mml-goods-price mml-float-l">￥49.50</text>
+                <view class="mml-goods-shoppingcart mml-float-r">
+                  <image src="/image/shoppingCart.png"></image>
+                </view>
+              </view>
+              <!-- 本店现货样式 -->
+              <view class="mml-now-stock">本店现货</view>
+            </view>
+          </view>
+      </view>
+    </view>
+   </scroll-view>
 </view>

@@ -67,7 +67,7 @@ wx-swiper .wx-swiper-dot-active {
   text-align: center;
 }
 /* 商品内容 */
-.mml-sell-todayBox {
+.mml-goods-box {
   padding: 25rpx;
 }
 /* 今日折扣商品样式 */
@@ -99,10 +99,114 @@ wx-swiper .wx-swiper-dot-active {
   background: #faece6;
 }
 /* 商品信息 */
-.mml-goods-title {
+.mml-sell-today-left .mml-goods-title {
   font-size: 24rpx;
   color: #333;
 }
-.mml-goodsPrice-btn {
+.mml-goods-image-box {
+  margin-top: 10rpx;
+  padding: 10rpx;
+  height: 240rpx;
+  width: 100%;
+}
+.mml-goods-image {
+  height: 220rpx;
+  width: 220rpx;
+}
+.mml-sell-rightBox {
+  padding: 15rpx;
+}
+.mml-sell-rightBox .mml-goods-content {
+  vertical-align: top;
+  display: inline-block;
+  width: 220rpx;
   font-size: 24rpx;
+}
+.mml-goodsLeft-btn {
+  margin-top: 48rpx;
+}
+.mml-goodsLeft-topBtn {
+  background: #aaacd4;
+}
+.mml-goods-ringtBox {
+  padding-left: 6rpx;
+  display: inline-block;
+}
+.mml-goods-ringtBox image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.mml-goodsLeft-bottomBtn {
+  background: #eba591;
+}
+/* 热门销售样式 */
+.mml-goods-showbanner {
+  width: 100%;
+  height: 282rpx;
+}
+.mml-goods-lists {
+  height: 320rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mml-goods-item {
+  width: 226rpx;
+  height: 100%;
+  background: #f7f7f7;
+  padding: 15rpx;
+  padding-top: 32rpx; 
+  text-align: center;
+  position: relative;
+}
+.mml-goods-item image {
+  width: 152rpx;
+  height: 152rpx;
+}
+.mml-goods-item .mml-goods-detail {
+  text-align: left;
+  width: 100%;
+}
+.mml-goods-item .mml-goods-detail .mml-goods-title {
+  font-size: 24rpx;
+}
+.mml-goods-item .mml-goods-detail .mml-goods-price {
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  color: #eb544d;
+  font-weight: 600;
+}
+.mml-goods-item .mml-goods-detail .mml-goods-shoppingcart {
+  display: inline-block;
+  width: 46rpx;
+  height: 46rpx;
+  background: #eb544d;
+  border-radius: 50%;
+  text-align: center;
+}
+.mml-goods-detail .mml-goods-shoppingcart image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: -8rpx;
+}
+.mml-goods-item .mml-now-stock {
+  width: 45rpx;
+  height: 64rpx;
+  background: #eb544d;
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  font-size: 16rpx;
+  color: #fff;
+}
+.mml-goods-item .mml-now-stock:after {
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  display: bolck;
+  content: '';
+  border-width: 10rpx 22rpx;
+  border-style: solid;
+  border-color: #eb544d #eb544d transparent #eb544d;
 }
