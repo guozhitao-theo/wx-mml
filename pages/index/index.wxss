@@ -22,9 +22,87 @@
   content: '';
   width: 36%;
   height: 10rpx;
-  background: red;
+  background: #eb544d;
   position: absolute;
   bottom: 10rpx;
   border-radius: 10rpx;
   left: 32%;
+}
+swiper {
+  height: 362rpx;
+}
+swiper-item image {
+  height: 362rpx;
+  width: 100%;
+}
+/* 轮播圆点样式 */
+wx-swiper .wx-swiper-dot-active {
+  width: 26rpx;
+  border-radius: 4px;
+}
+/* 轮播图上 定位 */
+.mml-swiper-box {
+  position: relative;
+}
+.mml-swiper-input-box {
+  height: 112rpx;
+  vertical-align: center;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0rpx;
+  padding: 25rpx;
+}
+.mml-swiper-shop {
+  font-size: 26rpx;
+  color: #fff;
+}
+.mml-swiper-input {
+  display: inline-block;
+  height: 62rpx;
+  line-height: 62rpx;
+  border-radius: 31rpx;
+  background: rgba(243, 240, 240, 0.8);
+  vertical-align: -20rpx;
+  text-align: center;
+}
+/* 商品内容 */
+.mml-sell-todayBox {
+  padding: 25rpx;
+}
+/* 今日折扣商品样式 */
+.mml-sell-today-left {
+  display: inline-block;
+  width: 270rpx;
+  height: 400rpx;
+  background: #ecf7fa;
+  font-size: 0;
+  padding: 15rpx;
+  vertical-align: top;
+}
+.mml-sell-today-right {
+  display: inline-block;
+  width: 432rpx;
+  height: 400rpx;
+  padding-left: 18rpx;
+  vertical-align: top;
+}
+.mml-sell-today-rightTop {
+  width: 414rpx;
+  height: 192rpx;
+  background: #E6e2f5;
+}
+.mml-sell-today-rightBottom {
+  margin-top: 16rpx;
+  width: 414rpx;
+  height: 192rpx;
+  background: #faece6;
+}
+/* 商品信息 */
+.mml-goods-title {
+  font-size: 24rpx;
+  color: #333;
+}
+.mml-goodsPrice-btn {
+  font-size: 24rpx;
 }
